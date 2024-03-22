@@ -2,7 +2,7 @@ from brute_force import brute_force
 from datetime import datetime
 
 etc_shadow = "/etc/shadow"
-# etc_shadow = "shadow"
+# etc_shadow = "./test/shadow"
 
 with open(etc_shadow, "r") as f:
     lines = f.readlines()
