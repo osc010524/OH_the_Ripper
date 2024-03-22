@@ -51,12 +51,15 @@ def main():
         cypher_salt = cypher_object[2]
 
     print(f"Cracking Started to {username} ")
-    print(f"Cracking Started at {datetime.now()}")
+    start_time = datetime.now()
+    print(f"Cracking Started at {start_time}")
 
     password = brute_force(min_length,max_length,required_chars,cyphertext,cypher_type,cypher_salt)
 
     print(f"Cracking Finished to {username} password: {password}")
-    print(f"Cracking Finished at {datetime.now()}")
+    end_time = datetime.now()
+    print(f"Cracking Finished at {end_time}")
+    print(f"Total Time: {end_time-start_time}")
 
 if __name__ == "__main__":
     main()
